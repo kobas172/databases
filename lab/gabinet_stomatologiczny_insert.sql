@@ -113,6 +113,16 @@ INSERT INTO Zabiegi VALUES ('ZZ005', '00112233446', '2500.00', 'NIE', '05/12/202
 INSERT INTO Zabiegi_Produkty VALUES (IDENT_CURRENT('Zabiegi'), (SELECT ID_Produktu FROM Produkty WHERE Nazwa = 'Rekawice'), '3')
 INSERT INTO Zabiegi_Produkty VALUES (IDENT_CURRENT('Zabiegi'), (SELECT ID_Produktu FROM Produkty WHERE Nazwa = 'Znieczulenie'), '2')
 
+INSERT INTO Zabiegi VALUES ('ZZ005', '88112233446', '2800.00', 'TAK', '12/01/2021', 'Nakladki ortodontyczne');
+INSERT INTO Zabiegi_Produkty VALUES (IDENT_CURRENT('Zabiegi'), (SELECT ID_Produktu FROM Produkty WHERE Nazwa = 'Rekawice'), '3')
+INSERT INTO Zabiegi_Produkty VALUES (IDENT_CURRENT('Zabiegi'), (SELECT ID_Produktu FROM Produkty WHERE Nazwa = 'Znieczulenie'), '2')
+
+INSERT INTO Zabiegi VALUES ('ZZ005', '77112233446', '2300.00', 'TAK', '12/03/2021', 'Nakladki ortodontyczne');
+INSERT INTO Zabiegi_Produkty VALUES (IDENT_CURRENT('Zabiegi'), (SELECT ID_Produktu FROM Produkty WHERE Nazwa = 'Rekawice'), '1')
+
+INSERT INTO Zabiegi VALUES ('ZZ005', '33112233446', '2000.00', 'TAK', '12/05/2021', 'Nakladki ortodontyczne');
+INSERT INTO Zabiegi_Produkty VALUES (IDENT_CURRENT('Zabiegi'), (SELECT ID_Produktu FROM Produkty WHERE Nazwa = 'Rekawice'), '1')
+
 INSERT INTO Zabiegi VALUES ('ZZ001', '88112233446', '150.00', 'TAK', '09/05/2021', 'Chirurgia stomatologiczna');
 INSERT INTO Recepta VALUES ('09/05/2021', 'Masc do smarowania', '88112233446', IDENT_CURRENT('Zabiegi'));
 INSERT INTO Zabiegi_Produkty VALUES (IDENT_CURRENT('Zabiegi'), (SELECT ID_Produktu FROM Produkty WHERE Nazwa = 'Rekawice'), '2')
@@ -127,6 +137,10 @@ INSERT INTO Zabiegi_Produkty VALUES (IDENT_CURRENT('Zabiegi'), (SELECT ID_Produk
 INSERT INTO Zabiegi_Produkty VALUES (IDENT_CURRENT('Zabiegi'), (SELECT ID_Produktu FROM Produkty WHERE Nazwa = 'Woda'), '1')
 
 INSERT INTO Zabiegi VALUES ('ZZ004', '33112233446', '600.50', 'TAK', '11/02/2021', 'Higienyzacja zebow i profilaktyka');
+INSERT INTO Recepta VALUES ('11/02/2021', 'Tabletki odpornosciowe', '33112233446', IDENT_CURRENT('Zabiegi'));
+INSERT INTO Zabiegi_Produkty VALUES (IDENT_CURRENT('Zabiegi'), (SELECT ID_Produktu FROM Produkty WHERE Nazwa = 'Rekawice'), '2')
+
+INSERT INTO Zabiegi VALUES ('ZZ004', '00112233446', '600.50', 'TAK', '11/09/2021', 'Higienyzacja zebow i profilaktyka');
 INSERT INTO Recepta VALUES ('11/02/2021', 'Tabletki odpornosciowe', '33112233446', IDENT_CURRENT('Zabiegi'));
 INSERT INTO Zabiegi_Produkty VALUES (IDENT_CURRENT('Zabiegi'), (SELECT ID_Produktu FROM Produkty WHERE Nazwa = 'Rekawice'), '2')
 
@@ -186,4 +200,24 @@ INSERT INTO Pracownicy_Zamowienia VALUES ((SELECT ID_Pracownika FROM Pracownicy 
 INSERT INTO Zamowienia_Produkty VALUES (IDENT_CURRENT('Zamowienia'), (SELECT ID_Produktu FROM Produkty WHERE Nazwa = 'Waciki'), '5');
 INSERT INTO Zamowienia_Produkty VALUES (IDENT_CURRENT('Zamowienia'), (SELECT ID_Produktu FROM Produkty WHERE Nazwa = 'Kubeczki'), '15');
 INSERT INTO Zamowienia_Produkty VALUES (IDENT_CURRENT('Zamowienia'), (SELECT ID_Produktu FROM Produkty WHERE Nazwa = 'Znieczulenie'), '10');
+
+INSERT INTO Zamowienia VALUES ('15.00');
+INSERT INTO Pracownicy_Zamowienia VALUES ((SELECT ID_Pracownika FROM Pracownicy WHERE Nazwisko = 'Dentystak'), IDENT_CURRENT('Zamowienia'))
+INSERT INTO Zamowienia_Produkty VALUES (IDENT_CURRENT('Zamowienia'), (SELECT ID_Produktu FROM Produkty WHERE Nazwa = 'Znieczulenie'), '5');
+
+INSERT INTO Zamowienia VALUES ('35.00');
+INSERT INTO Pracownicy_Zamowienia VALUES ((SELECT ID_Pracownika FROM Pracownicy WHERE Nazwisko = 'Ronaldo'), IDENT_CURRENT('Zamowienia'))
+INSERT INTO Zamowienia_Produkty VALUES (IDENT_CURRENT('Zamowienia'), (SELECT ID_Produktu FROM Produkty WHERE Nazwa = 'Waciki'), '50');
+
+INSERT INTO Zamowienia VALUES ('150.00');
+INSERT INTO Pracownicy_Zamowienia VALUES ((SELECT ID_Pracownika FROM Pracownicy WHERE Nazwisko = 'Bryant'), IDENT_CURRENT('Zamowienia'))
+INSERT INTO Zamowienia_Produkty VALUES (IDENT_CURRENT('Zamowienia'), (SELECT ID_Produktu FROM Produkty WHERE Nazwa = 'Kubeczki'), '100');
+
+INSERT INTO Zamowienia VALUES ('1.00');
+INSERT INTO Pracownicy_Zamowienia VALUES ((SELECT ID_Pracownika FROM Pracownicy WHERE Nazwisko = 'Slychac'), IDENT_CURRENT('Zamowienia'))
+INSERT INTO Zamowienia_Produkty VALUES (IDENT_CURRENT('Zamowienia'), (SELECT ID_Produktu FROM Produkty WHERE Nazwa = 'Rekawice'), '21');
+
+INSERT INTO Zamowienia VALUES ('15.00');
+INSERT INTO Pracownicy_Zamowienia VALUES ((SELECT ID_Pracownika FROM Pracownicy WHERE Nazwisko = 'Anthony'), IDENT_CURRENT('Zamowienia'))
+INSERT INTO Zamowienia_Produkty VALUES (IDENT_CURRENT('Zamowienia'), (SELECT ID_Produktu FROM Produkty WHERE Nazwa = 'Serwetki'), '15');
 
